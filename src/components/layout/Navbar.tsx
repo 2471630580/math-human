@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Book, ChevronDown, Settings, Volume2, BookOpen, Mic, Edit3 } from 'lucide-react';
@@ -60,14 +59,23 @@ const Navbar = () => {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
-                <DropdownMenuItem>
-                  <span>我的错题本</span>
+                <DropdownMenuItem asChild>
+                  <Link to="/mistakes" className="flex items-center gap-2">
+                    <Book className="h-4 w-4" />
+                    <span>我的错题本</span>
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <span>语言偏好</span>
+                <DropdownMenuItem asChild>
+                  <Link to="/settings" className="flex items-center gap-2">
+                    <Settings className="h-4 w-4" />
+                    <span>语言偏好</span>
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <span>个人资料</span>
+                <DropdownMenuItem asChild>
+                  <Link to="/settings" className="flex items-center gap-2">
+                    <Settings className="h-4 w-4" />
+                    <span>个人资料</span>
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
